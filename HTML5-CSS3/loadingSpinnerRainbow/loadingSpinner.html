@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading Spinner</title>
+	<style type="text/css">
+		.gumroad-loading-indicator {
+		    background: white;
+		    border-radius: 50%;
+		    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+		    box-sizing: border-box;
+		    display: none;
+		    height: 60px;
+		    left: 50% !important;
+		    margin-left: -30px !important;
+		    margin-top: -30px !important;
+		    padding: 10px;
+		    position: fixed;
+		    top: 50% !important;
+		    width: 60px;
+		    z-index: 99997;
+		}
+		.gumroad-loading-indicator i {
+		    background: url("https://gumroad.com/js/loading-rainbow.svg");
+		    height: 40px;
+		    width: 40px;
+		    display: inline-block;
+		    background-size: contain;
+		    -webkit-animation: gumroad-spin 1.5s infinite linear;
+		    animation: gumroad-spin 1.5s infinite linear;
+		}
+		@-webkit-keyframes gumroad-spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg); 
+				}
+			100% {
+				-webkit-transform: rotate(359deg);
+				transform: rotate(359deg); 
+			} 
+		}
+		@keyframes gumroad-spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(359deg);
+				transform: rotate(359deg); 
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="gumroad-loading-indicator" style="display: block; opacity: 1;"><i></i></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading Bar</title>
+	<style type="text/css">
+		.loadingBar {
+		    position: fixed;
+		    display: none;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    height: 2px;
+		    z-index: 800;
+		    background: #48e79a;
+		    transform: translateX(100%);
+		}
+
+		.is-loadingApp .loadingBar {
+		    display: block;
+		    animation: shift-rightwards 1s ease-in-out infinite;
+		    animation-delay: .8s
+		}
+
+		@keyframes shift-rightwards {
+		    0% {
+		        transform: translateX(-100%)
+		    }
+
+		    40% {
+		        transform: translateX(0)
+		    }
+
+		    60% {
+		        transform: translateX(0)
+		    }
+
+		    100% {
+		        transform: translateX(100%)
+		    }
+		}
+	</style>
+</head>
+<body class="is-loadingApp">
+	<div class="loadingBar"></div>
+</body>
+</html>

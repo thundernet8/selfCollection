@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+		.clip-container .bb, .bb::before, .bb::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .clip-container .bb {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background: no-repeat 50%/70% rgba(0, 0, 0, 0.1);
+            color: #69ca62;
+            box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+        }
+
+        .clip-container .bb::before, .bb::after {
+            content: '';
+            z-index: -1;
+            margin: -5%;
+            box-shadow: inset 0 0 0 2px;
+            animation: clipMe 8s linear infinite;
+        }
+
+        .clip-container .bb::before {
+            animation-delay: -4s;
+        }
+
+        @keyframes clipMe {
+            0%, 100% {
+                clip: rect(0px, 220px, 2px, 0px);
+            }
+            25% {
+                clip: rect(0px, 2px, 220px, 0px);
+            }
+            50% {
+                clip: rect(218px, 220px, 220px, 0px);
+            }
+            75% {
+                clip: rect(0px, 220px, 220px, 218px);
+            }
+        }
+</style>
+</head>
+<body>
+<div class="clip-container">
+    <div class="bb"></div>
+    <div style="display:none;">
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?f312172c323a817c690bbee99dd1f5c0";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </div>
+</div>
+</body>
+</html>
