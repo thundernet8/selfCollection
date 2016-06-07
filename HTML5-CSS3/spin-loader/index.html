@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spin Loader</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		#sf-home-preloader {
+		    position: fixed;
+		    top: 0;
+		    height: 100%;
+		    background: #fff;
+		    width: 100%;
+		    z-index: 999;
+		    overflow: hidden;
+		}
+		#preloader-loading {
+		    position: absolute;
+		    top: 0;
+		    height: 100%;
+		    width: 100%;
+		    padding: 0 10%;
+		    text-align: center;
+		}
+		.orbit-bars .spinner {
+		    width: 50px!important;
+		    height: 50px!important;
+		    display: inline-block;
+		    margin-left: -25px;
+		    margin-top: -25px!important;
+		}
+		#preloader-loading .spinner {
+		    margin: -25px auto 0;
+		    height: 50px;
+		    width: 50px;
+		    position: relative;
+		    top: 50%;
+		    webkit-transition: all 0.3s ease-out;
+		    -moz-transition: all 0.3s ease-out;
+		    -o-transition: all 0.3s ease-out;
+		    transition: all 0.3s ease-out;
+		}
+		.orbit-bars .spinner > div:before {
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    left: 0;
+		    border-top: solid 8px #ff3c50;
+		    border-bottom: solid 8px #ff3c50;
+		    border-left: solid 8px transparent;
+		    border-right: solid 8px transparent;
+		    content: "";
+		    -webkit-border-radius: 50px;
+		    -moz-border-radius: 50px;
+		    -ms-border-radius: 50px;
+		    -o-border-radius: 50px;
+		    border-radius: 50px;
+		    -webkit-animation: orbit-bars 1s infinite ease;
+		    -moz-animation: orbit-bars 1s infinite ease;
+		    -ms-animation: orbit-bars 1s infinite ease;
+		    -o-animation: orbit-bars 1s infinite ease;
+		    animation: orbit-bars 1s infinite ease;
+		}
+		.orbit-bars .spinner > div:before {
+		    border-top-color: #52cebe;
+		    border-bottom-color: #52cebe;
+		}
+		.orbit-bars .spinner > div:after {
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    left: 0;
+		    margin: auto;
+		    width: 16px;
+		    height: 16px;
+		    background-color: #28aadc;
+		    content: "";
+		    -webkit-border-radius: 20px;
+		    -moz-border-radius: 20px;
+		    -ms-border-radius: 20px;
+		    -o-border-radius: 20px;
+		    border-radius: 20px;
+		}
+		.orbit-bars .spinner > div:after {
+		    background-color: #e4e4e4;
+		}
+		@-webkit-keyframes orbit-bars {
+		  from {
+		    -webkit-transform: rotate(0deg);
+		  }
+
+		  to {
+		    -webkit-transform: rotate(360deg);
+		  }
+		}
+
+		@-moz-keyframes orbit-bars {
+		  from {
+		    -moz-transform: rotate(0deg);
+		  }
+
+		  to {
+		    -moz-transform: rotate(360deg);
+		  }
+		}
+
+		@-ms-keyframes orbit-bars {
+		  from {
+		    -ms-transform: rotate(0deg);
+		  }
+
+		  to {
+		    -ms-transform: rotate(360deg);
+		  }
+		}
+
+		@-o-keyframes orbit-bars {
+		  from {
+		    -o-transform: rotate(0deg);
+		  }
+
+		  to {
+		    -o-transform: rotate(360deg);
+		  }
+		}
+
+		@keyframes orbit-bars {
+		  from {
+		    transform: rotate(0deg);
+		  }
+
+		  to {
+		    transform: rotate(360deg);
+		  }
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="sf-home-preloader">		
+			<div id="preloader-loading" class="orbit-bars">
+				<div class="spinner preloader">
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
